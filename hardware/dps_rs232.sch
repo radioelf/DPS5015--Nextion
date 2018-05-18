@@ -1,0 +1,707 @@
+EESchema Schematic File Version 4
+LIBS:dps_rs232-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Nextion UART DPS5015"
+Date "2018-05-12"
+Rev "0.0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 8850 2500 2    50   Output ~ 0
+RX->DPS1
+Text GLabel 8850 3100 2    50   Output ~ 0
+RX->DPS2
+Text GLabel 8850 3650 2    50   Input ~ 0
+TX<-DPS1
+Text GLabel 8850 4150 2    50   Input ~ 0
+TX<-DPS2
+Wire Wire Line
+	8850 4150 8450 4150
+$Comp
+L Mechanical:Mounting_Hole_PAD MK11
+U 1 1 5AA03670
+P 8450 3000
+F 0 "MK11" H 8550 3051 50  0000 L CNN
+F 1 "RX" H 8550 2960 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 8450 3000 50  0001 C CNN
+F 3 "" H 8450 3000 50  0001 C CNN
+	1    8450 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK12
+U 1 1 5AA03757
+P 8450 3550
+F 0 "MK12" H 8550 3601 50  0000 L CNN
+F 1 "TX1" H 8550 3510 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 8450 3550 50  0001 C CNN
+F 3 "" H 8450 3550 50  0001 C CNN
+	1    8450 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK13
+U 1 1 5AA037BD
+P 8450 4050
+F 0 "MK13" H 8550 4101 50  0000 L CNN
+F 1 "TX2" H 8550 4010 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 8450 4050 50  0001 C CNN
+F 3 "" H 8450 4050 50  0001 C CNN
+	1    8450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK1
+U 1 1 5AA03820
+P 3700 2050
+F 0 "MK1" H 3800 2101 50  0000 L CNN
+F 1 "+5v" H 3800 2010 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3700 2050 50  0001 C CNN
+F 3 "" H 3700 2050 50  0001 C CNN
+	1    3700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK4
+U 1 1 5AA038AC
+P 5650 5700
+F 0 "MK4" H 5700 5650 50  0000 L CNN
+F 1 "RX->nextion" H 5400 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 5650 5700 50  0001 C CNN
+F 3 "" H 5650 5700 50  0001 C CNN
+	1    5650 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK6
+U 1 1 5AA03BDB
+P 6150 5700
+F 0 "MK6" H 5950 5650 50  0000 L CNN
+F 1 "TX<-nextion" H 5900 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 6150 5700 50  0001 C CNN
+F 3 "" H 6150 5700 50  0001 C CNN
+	1    6150 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK8
+U 1 1 5AA03C64
+P 6550 5700
+F 0 "MK8" H 6350 5650 50  0000 L CNN
+F 1 "ON_OFF_encoder" H 6050 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 6550 5700 50  0001 C CNN
+F 3 "" H 6550 5700 50  0001 C CNN
+	1    6550 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK9
+U 1 1 5AA03F18
+P 2500 5700
+F 0 "MK9" H 2300 5650 50  0000 L CNN
+F 1 "USB_PC" H 2300 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 2500 5700 50  0001 C CNN
+F 3 "" H 2500 5700 50  0001 C CNN
+	1    2500 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK2
+U 1 1 5AA03F87
+P 3900 5700
+F 0 "MK2" H 3950 5650 50  0000 L CNN
+F 1 "GND" H 3850 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3900 5700 50  0001 C CNN
+F 3 "" H 3900 5700 50  0001 C CNN
+	1    3900 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5AA0E46E
+P 7050 4900
+F 0 "R7" V 6950 4800 50  0000 C CNN
+F 1 "1K" V 6950 5000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 4900 50  0001 C CNN
+F 3 "~" H 7050 4900 50  0001 C CNN
+	1    7050 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 5350 8300 5350
+$Comp
+L Mechanical:Mounting_Hole_PAD MK7
+U 1 1 5AA18F8B
+P 5500 2750
+F 0 "MK7" H 5300 2700 50  0000 L CNN
+F 1 "C" H 5400 2900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 5500 2750 50  0001 C CNN
+F 3 "" H 5500 2750 50  0001 C CNN
+	1    5500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5AA1C0BD
+P 7050 3950
+F 0 "R5" V 6950 3850 50  0000 C CNN
+F 1 "10K" V 6950 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 3950 50  0001 C CNN
+F 3 "~" H 7050 3950 50  0001 C CNN
+	1    7050 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5AA1C101
+P 7050 4650
+F 0 "R6" V 6950 4550 50  0000 C CNN
+F 1 "10K" V 6950 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 4650 50  0001 C CNN
+F 3 "~" H 7050 4650 50  0001 C CNN
+	1    7050 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Logic_74xx:74LS126 U1
+U 4 1 5AAAB4F5
+P 7900 4150
+F 0 "U1" H 8050 4300 50  0000 C CNN
+F 1 "74HC126" H 8200 4050 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7900 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 7900 4150 50  0001 C CNN
+	4    7900 4150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Logic_74xx:74LS126 U1
+U 2 1 5AAAB5D3
+P 7900 3100
+F 0 "U1" H 7650 3250 50  0000 C CNN
+F 1 "74HC126" H 7550 3000 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7900 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 7900 3100 50  0001 C CNN
+	2    7900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_74xx:74LS126 U1
+U 3 1 5AAAB69E
+P 7900 3650
+F 0 "U1" H 7650 3800 50  0000 C CNN
+F 1 "74HC126" H 7550 3550 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7900 3650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 7900 3650 50  0001 C CNN
+	3    7900 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Logic_74xx:74LS126 U1
+U 5 1 5AAAB809
+P 6100 2250
+F 0 "U1" V 6467 2250 50  0000 C CNN
+F 1 "74HC126" V 6376 2250 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6100 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 6100 2250 50  0001 C CNN
+	5    6100 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8200 3100 8450 3100
+Wire Wire Line
+	8200 3650 8450 3650
+Wire Wire Line
+	8200 4150 8450 4150
+Wire Wire Line
+	7900 3350 7900 3450
+Wire Wire Line
+	7900 3900 7900 3950
+Wire Wire Line
+	7900 4400 7900 4450
+Wire Wire Line
+	5600 2250 5500 2250
+Wire Wire Line
+	7600 4150 7550 4150
+Wire Wire Line
+	6600 2250 6800 2250
+$Comp
+L Device:C C4
+U 1 1 5AAEA501
+P 6100 1750
+F 0 "C4" V 5848 1750 50  0000 C CNN
+F 1 "100nF" V 5939 1750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6138 1600 50  0001 C CNN
+F 3 "~" H 6100 1750 50  0001 C CNN
+	1    6100 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6250 1750 6800 1750
+Wire Wire Line
+	6800 1750 6800 2250
+Connection ~ 6800 2250
+Wire Wire Line
+	5950 1750 5500 1750
+Wire Wire Line
+	5500 1750 5500 2250
+Connection ~ 5500 2250
+$Comp
+L Device:Q_PNP_BEC Q1
+U 1 1 5AAFE90A
+P 7900 5250
+F 0 "Q1" V 8228 5250 50  0000 C CNN
+F 1 "Q_PNP" V 8137 5250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 5350 50  0001 C CNN
+F 3 "~" H 7900 5250 50  0001 C CNN
+	1    7900 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Logic_74xx:74LS126 U1
+U 1 1 5AB2FB18
+P 7900 2500
+F 0 "U1" H 8050 2650 50  0000 C CNN
+F 1 "74HC126" H 8150 2400 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7900 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 7900 2500 50  0001 C CNN
+	1    7900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2500 8450 2500
+Wire Wire Line
+	7600 2500 7100 2500
+Wire Wire Line
+	7100 2500 7100 3100
+Wire Wire Line
+	7100 3100 7600 3100
+Wire Wire Line
+	6800 2250 6800 3300
+Wire Wire Line
+	7900 3450 7400 3450
+Wire Wire Line
+	7400 3450 7400 4450
+Wire Wire Line
+	7400 4450 7900 4450
+Wire Wire Line
+	8450 3100 8850 3100
+$Comp
+L Mechanical:Mounting_Hole_PAD MK10
+U 1 1 5AB49E60
+P 8450 2400
+F 0 "MK10" H 8550 2451 50  0000 L CNN
+F 1 "RX" H 8550 2360 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 8450 2400 50  0001 C CNN
+F 3 "" H 8450 2400 50  0001 C CNN
+	1    8450 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 2500 8200 2500
+Connection ~ 7400 4450
+$Comp
+L MCU_Module:Arduino_Nano_v2.x A1
+U 1 1 5AB35231
+P 3900 4250
+F 0 "A1" H 4400 3350 50  0000 C CNN
+F 1 "Arduino_Nano" H 4650 4600 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4050 3300 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf" H 3900 3250 50  0001 C CNN
+	1    3900 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 5350 3800 5250
+Wire Wire Line
+	3800 5350 3900 5350
+Wire Wire Line
+	3900 5250 3900 5350
+Connection ~ 3900 5350
+Wire Wire Line
+	4400 4250 6700 4250
+Wire Wire Line
+	3900 5350 6800 5350
+Wire Wire Line
+	6700 4250 6700 4900
+Text GLabel 3350 2250 0    50   BiDi ~ 0
++5v
+Wire Wire Line
+	3350 2250 3700 2250
+Wire Wire Line
+	3700 3250 3700 2250
+Connection ~ 3700 2250
+Wire Wire Line
+	3700 2150 3700 2250
+Wire Wire Line
+	7550 3650 7600 3650
+Wire Wire Line
+	3700 2250 5500 2250
+Wire Wire Line
+	3900 5600 3900 5350
+Text GLabel 3350 5350 0    50   BiDi ~ 0
+GND
+Wire Wire Line
+	3350 5350 3800 5350
+Connection ~ 3800 5350
+Wire Wire Line
+	4400 4650 6150 4650
+Wire Wire Line
+	4400 4750 5650 4750
+Text Label 4450 4750 0    50   ~ 0
+TX2
+Text Label 4450 4650 0    50   ~ 0
+RX2
+Wire Wire Line
+	4400 4550 6550 4550
+Wire Wire Line
+	6550 4550 6550 5600
+Text Label 4450 4550 0    50   ~ 0
+ON_encoder
+Wire Wire Line
+	7300 3950 7900 3950
+Connection ~ 7300 3950
+Wire Wire Line
+	7550 3650 7550 4150
+Text Label 4450 4350 0    50   ~ 0
+ON_DPS1
+Text Label 4450 4450 0    50   ~ 0
+ON_DPS2
+Text Label 3000 4250 0    50   ~ 0
+USB_PC
+$Comp
+L Mechanical:Mounting_Hole_PAD MK5
+U 1 1 5AB918FB
+P 5200 2750
+F 0 "MK5" H 5050 2700 50  0000 L CNN
+F 1 "B" H 5100 2900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 5200 2750 50  0001 C CNN
+F 3 "" H 5200 2750 50  0001 C CNN
+	1    5200 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK3
+U 1 1 5AB91949
+P 4900 2750
+F 0 "MK3" H 4700 2700 50  0000 L CNN
+F 1 "A" H 4800 2900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 4900 2750 50  0001 C CNN
+F 3 "" H 4900 2750 50  0001 C CNN
+	1    4900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3850 4900 3850
+Wire Wire Line
+	4400 3950 5200 3950
+Wire Wire Line
+	4400 4050 5500 4050
+Text Label 4450 3650 0    50   ~ 0
+RX1
+Text Label 4450 3750 0    50   ~ 0
+TX1
+Text Label 4450 3850 0    50   ~ 0
+A
+Text Label 4450 3950 0    50   ~ 0
+B
+Text Label 4450 4050 0    50   ~ 0
+C
+Wire Wire Line
+	7900 4900 7900 5050
+Wire Wire Line
+	7200 4900 7900 4900
+Wire Wire Line
+	8450 3650 8850 3650
+Connection ~ 8450 3100
+Connection ~ 8450 2500
+Wire Wire Line
+	7100 3750 7100 3100
+Connection ~ 7100 3100
+Connection ~ 8450 4150
+Connection ~ 8450 3650
+Wire Wire Line
+	7200 3950 7300 3950
+Wire Wire Line
+	7300 3950 7300 4350
+Wire Wire Line
+	7900 2750 7900 2850
+Wire Wire Line
+	7900 2850 7300 2850
+Wire Wire Line
+	7300 2850 7300 3950
+Wire Wire Line
+	7200 4650 7400 4650
+Wire Wire Line
+	7400 4450 7400 4650
+NoConn ~ 3400 4050
+NoConn ~ 3400 4450
+NoConn ~ 3400 4550
+NoConn ~ 3400 4650
+NoConn ~ 3400 4750
+NoConn ~ 3400 4850
+NoConn ~ 3400 4950
+NoConn ~ 3400 3750
+NoConn ~ 3400 3650
+NoConn ~ 3800 3250
+NoConn ~ 4000 3250
+Text Notes 5350 2550 0    50   ~ 0
+Encoder
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5AC73ED5
+P 8650 4800
+F 0 "BZ1" H 8803 4829 50  0000 L CNN
+F 1 "Buzzer" H 8803 4738 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 8625 4900 50  0001 C CNN
+F 3 "~" V 8625 4900 50  0001 C CNN
+	1    8650 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4900 8300 4900
+Wire Wire Line
+	8300 4900 8300 5350
+Text GLabel 8400 4700 0    50   BiDi ~ 0
++5v
+Wire Wire Line
+	8550 4700 8400 4700
+$Comp
+L Device:R R3
+U 1 1 5AC8B435
+P 5500 3050
+F 0 "R3" H 5400 2950 50  0000 C CNN
+F 1 "10K" V 5400 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5430 3050 50  0001 C CNN
+F 3 "~" H 5500 3050 50  0001 C CNN
+	1    5500 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5AC8B53A
+P 5200 3050
+F 0 "R2" H 5100 2950 50  0000 C CNN
+F 1 "10K" V 5100 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 3050 50  0001 C CNN
+F 3 "~" H 5200 3050 50  0001 C CNN
+	1    5200 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5AC8B590
+P 4900 3050
+F 0 "R1" H 4800 2950 50  0000 C CNN
+F 1 "10K" V 4800 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4830 3050 50  0001 C CNN
+F 3 "~" H 4900 3050 50  0001 C CNN
+	1    4900 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 2850 4900 2900
+Wire Wire Line
+	4900 3200 4900 3300
+Wire Wire Line
+	5500 4050 5500 3950
+Wire Wire Line
+	5200 3200 5200 3550
+$Comp
+L Device:C C2
+U 1 1 5AC95E69
+P 5950 3550
+F 0 "C2" V 5900 3450 50  0000 C CNN
+F 1 "10nF" V 5900 3700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5988 3400 50  0001 C CNN
+F 3 "~" H 5950 3550 50  0001 C CNN
+	1    5950 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5AC95EC9
+P 5950 3300
+F 0 "C1" V 5900 3200 50  0000 C CNN
+F 1 "10nF" V 5900 3450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5988 3150 50  0001 C CNN
+F 3 "~" H 5950 3300 50  0001 C CNN
+	1    5950 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5AC7F9EC
+P 5950 3950
+F 0 "C3" V 5900 3850 50  0000 C CNN
+F 1 "10nF" V 5900 4100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5988 3800 50  0001 C CNN
+F 3 "~" H 5950 3950 50  0001 C CNN
+	1    5950 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 3950 5500 3950
+Connection ~ 5500 3950
+Wire Wire Line
+	5500 3950 5500 3200
+Wire Wire Line
+	5800 3550 5200 3550
+Connection ~ 5200 3550
+Wire Wire Line
+	5200 3550 5200 3950
+Wire Wire Line
+	5800 3300 4900 3300
+Connection ~ 4900 3300
+Wire Wire Line
+	4900 3300 4900 3850
+Wire Wire Line
+	5500 2850 5500 2900
+Wire Wire Line
+	5200 2850 5200 2900
+Wire Wire Line
+	6100 3300 6800 3300
+Connection ~ 6800 3300
+Wire Wire Line
+	6800 3300 6800 3550
+Wire Wire Line
+	6100 3550 6800 3550
+Connection ~ 6800 3550
+Wire Wire Line
+	6800 3550 6800 3950
+Wire Wire Line
+	6100 3950 6800 3950
+Connection ~ 6800 3950
+$Comp
+L Device:R R8
+U 1 1 5ABC8A4A
+P 5650 5150
+F 0 "R8" H 5550 5050 50  0000 C CNN
+F 1 "330R" H 5500 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5580 5150 50  0001 C CNN
+F 3 "~" H 5650 5150 50  0001 C CNN
+	1    5650 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 4650 6150 5600
+Wire Wire Line
+	5650 4750 5650 5000
+Wire Wire Line
+	5650 5300 5650 5600
+Text Label 4450 4250 0    50   ~ 0
+Buzzer
+Text Notes 3000 2150 0    50   ~ 0
+Module:\nXL7015 DC-DC\n5-80V
+$Comp
+L Mechanical:Mounting_Hole_PAD MK14
+U 1 1 5AEAEDCB
+P 5300 5700
+F 0 "MK14" H 5350 5650 50  0000 L CNN
+F 1 "ON_3v3-5v" H 5200 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 5300 5700 50  0001 C CNN
+F 3 "" H 5300 5700 50  0001 C CNN
+	1    5300 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 4850 5300 4850
+Wire Wire Line
+	5300 4850 5300 5600
+Wire Wire Line
+	3400 4250 2500 4250
+Wire Wire Line
+	2500 4250 2500 5600
+$Comp
+L Device:R R4
+U 1 1 5AF2F83E
+P 3000 5150
+F 0 "R4" H 2900 5050 50  0000 C CNN
+F 1 "330R" H 3150 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2930 5150 50  0001 C CNN
+F 3 "~" H 3000 5150 50  0001 C CNN
+	1    3000 5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5AF2F91E
+P 4900 5150
+F 0 "R9" H 4800 5050 50  0000 C CNN
+F 1 "330R" H 4750 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4830 5150 50  0001 C CNN
+F 3 "~" H 4900 5150 50  0001 C CNN
+	1    4900 5150
+	-1   0    0    1   
+$EndComp
+Connection ~ 7550 3650
+$Comp
+L Mechanical:Mounting_Hole_PAD MK15
+U 1 1 5AF712EB
+P 3000 5700
+F 0 "MK15" H 3050 5650 50  0000 L CNN
+F 1 "Led2" H 2950 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3000 5700 50  0001 C CNN
+F 3 "" H 3000 5700 50  0001 C CNN
+	1    3000 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole_PAD MK16
+U 1 1 5AF71359
+P 4900 5700
+F 0 "MK16" H 4950 5650 50  0000 L CNN
+F 1 "Led1" H 4850 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 4900 5700 50  0001 C CNN
+F 3 "" H 4900 5700 50  0001 C CNN
+	1    4900 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 5300 3000 5600
+Wire Wire Line
+	6800 5350 7700 5350
+Connection ~ 6800 5350
+Wire Wire Line
+	6700 4900 6900 4900
+Wire Wire Line
+	6800 4650 6900 4650
+Connection ~ 6800 4650
+Wire Wire Line
+	6800 4650 6800 5350
+Wire Wire Line
+	6800 3950 6900 3950
+Wire Wire Line
+	6800 3950 6800 4650
+Wire Wire Line
+	4400 3650 7550 3650
+Wire Wire Line
+	4400 3750 7100 3750
+Wire Wire Line
+	4400 4350 7300 4350
+Wire Wire Line
+	4400 4450 7400 4450
+Wire Wire Line
+	4400 4150 4900 4150
+Wire Wire Line
+	4900 4150 4900 5000
+Wire Wire Line
+	4900 5300 4900 5600
+NoConn ~ 4400 4950
+Wire Wire Line
+	3400 4350 3000 4350
+Wire Wire Line
+	3000 4350 3000 5000
+Text Label 3000 4350 0    50   ~ 0
+Ledfuente1
+Text Label 4450 4150 0    50   ~ 0
+Ledfuente2
+Text Label 4450 4850 0    50   ~ 0
+ON_3v3-5v
+$EndSCHEMATC
